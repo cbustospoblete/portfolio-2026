@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass-panel {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+  }
+  .bg-mesh {
+    background-image:
+      radial-gradient(at 40% 20%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, rgba(129, 140, 248, 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, rgba(99, 102, 241, 0.1) 0px, transparent 50%);
+  }
+  .bg-liquid-mesh {
+    background-image:
+      radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.25), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(129, 140, 248, 0.2), transparent 25%);
+  }
+  .outline-text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    color: transparent;
+    transition: all 0.5s ease;
+  }
+  .text-glow {
+    text-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  .hover-card-glow:hover {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.4);
+  }
+  .horizontal-scroll-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2rem;
+  }
+  .scroll-card { scroll-snap-align: center; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .project-title-overlay {
+    font-size: 8rem;
+    line-height: 0.8;
+    opacity: 0.1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+    font-weight: 800;
+    transition: opacity 0.5s ease;
+  }
+  .grain-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+  .topbar-gradient {
+    background-image: linear-gradient(180deg, rgba(2, 2, 3, 0.85) 0%, rgba(2, 2, 3, 0.45) 80%, rgba(2, 2, 3, 0) 100%);
+  }
+}

@@ -11,8 +11,10 @@ html, body, #__nuxt {
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  color: #0f172a;
-  background: #f8fafc;
+  color: #e2e8f0;
+  background: #020203;
+}
+html { 
+  /* Lenis handles smooth scroll */
 }
 </style>
-
