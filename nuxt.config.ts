@@ -13,6 +13,13 @@ export default defineNuxtConfig({
       autoprefixer: {}
     }
   },
+  runtimeConfig: {
+    public: {
+      githubUser: 'cbustospoblete',
+      githubUrl: 'https://github.com/cbustospoblete',
+      linkedinUrl: 'https://www.linkedin.com/in/carlos-bustos-poblete/'
+    }
+  },
   app: {
     head: {
       title: 'Portfolio 2026',

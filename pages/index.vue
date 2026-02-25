@@ -5,8 +5,11 @@
     <HeroSectionV2 />
     <!-- <AboutSection /> -->
     <AboutSectionV2 />
+    <TechCarousel />
+    <ExperienceSection />
     <ProjectsSection />
     <ContactSection />
+    <FooterSection />
   </div>
 </template>
 
